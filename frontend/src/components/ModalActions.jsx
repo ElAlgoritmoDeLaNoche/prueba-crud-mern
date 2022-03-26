@@ -78,7 +78,7 @@ export const ModalActions = ({
                 <input
                   type="text"
                   className="form-control"
-                  name="nombres"
+                  name="nombre"
                   required
                   autoFocus
                   onChange={(e) => handleChange(e)}
@@ -90,7 +90,7 @@ export const ModalActions = ({
                 <input
                   type="text"
                   className="form-control"
-                  name="apellidos"
+                  name="apellido"
                   required
                   onChange={(e) => handleChange(e)}
                   value={dataEmployee.apellido}
