@@ -11,8 +11,8 @@ export const ModalActions = ({
   employee,
 }) => {
   const initialState = {
-    nombres: "",
-    apellidos: "",
+    nombre: "",
+    apellido: "",
     id: "",
     tcontrato: "Fijo",
   };
@@ -37,9 +37,9 @@ export const ModalActions = ({
       let resp = {};
       edit
         ? (resp = await axios.put(
-            `/employee/update/${employee._id}`,
-            dataEmployee
-          ))
+          `/employee/update/${employee._id}`,
+          dataEmployee
+        ))
         : (resp = await axios.post("/employee", dataEmployee));
       Swal.fire({
         icon: "success",
@@ -74,7 +74,7 @@ export const ModalActions = ({
           <div className="card-body">
             <form onSubmit={actions}>
               <div className="mb-3">
-                <label className="form-label">Nombres</label>
+                <label className="form-label">Nombre</label>
                 <input
                   type="text"
                   className="form-control"
@@ -82,18 +82,18 @@ export const ModalActions = ({
                   required
                   autoFocus
                   onChange={(e) => handleChange(e)}
-                  value={dataEmployee.nombres}
+                  value={dataEmployee.nombre}
                 />
               </div>
               <div className="mb-3">
-                <label className="form-label">Apellidos</label>
+                <label className="form-label">Apellido</label>
                 <input
                   type="text"
                   className="form-control"
                   name="apellidos"
                   required
                   onChange={(e) => handleChange(e)}
-                  value={dataEmployee.apellidos}
+                  value={dataEmployee.apellido}
                 />
               </div>
               <div className="mb-3">

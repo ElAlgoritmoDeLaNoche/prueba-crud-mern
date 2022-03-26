@@ -89,12 +89,12 @@ export const Employees = () => {
     if (value.length) {
       updatedData = empleados.filter((item) => {
         const startWith =
-          item.nombres.toLowerCase().startsWith(value.toLowerCase()) ||
-          item.apellidos.toLowerCase().startsWith(value.toLowerCase());
+          item.nombre.toLowerCase().startsWith(value.toLowerCase()) ||
+          item.apellido.toLowerCase().startsWith(value.toLowerCase());
 
         const includes =
-          item.nombres.toLowerCase().includes(value.toLowerCase()) ||
-          item.apellidos.toLowerCase().includes(value.toLowerCase());
+          item.nombre.toLowerCase().includes(value.toLowerCase()) ||
+          item.apellido.toLowerCase().includes(value.toLowerCase());
 
         if (startWith) {
           return startWith;
@@ -151,8 +151,8 @@ export const Employees = () => {
                       <thead className="table-dark">
                         <tr>
                           <th>#</th>
-                          <th>Nombres</th>
-                          <th>Apellidos</th>
+                          <th>Nombre</th>
+                          <th>Apellido</th>
                           <th>Identificación</th>
                           <th>Tipo de contrato</th>
                           <th>Opciones</th>
@@ -163,8 +163,8 @@ export const Employees = () => {
                         {filterData.map((item, i) => (
                           <tr key={item._id}>
                             <td>{i + 1}</td>
-                            <td>{item.nombres}</td>
-                            <td>{item.apellidos}</td>
+                            <td>{item.nombre}</td>
+                            <td>{item.apellido}</td>
                             <td>{item.id}</td>
                             <td>{item.tcontrato}</td>
                             <td>
