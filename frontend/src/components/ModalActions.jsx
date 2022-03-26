@@ -11,8 +11,8 @@ export const ModalActions = ({
   employee,
 }) => {
   const initialState = {
-    nombre: "",
-    apellido: "",
+    nombres: "",
+    apellidos: "",
     id: "",
     tcontrato: "Fijo",
   };
@@ -74,26 +74,26 @@ export const ModalActions = ({
           <div className="card-body">
             <form onSubmit={actions}>
               <div className="mb-3">
-                <label className="form-label">Nombre</label>
+                <label className="form-label">Nombres</label>
                 <input
                   type="text"
                   className="form-control"
-                  name="nombre"
+                  name="nombres"
                   required
                   autoFocus
                   onChange={(e) => handleChange(e)}
-                  value={dataEmployee.nombre}
+                  value={dataEmployee.nombres}
                 />
               </div>
               <div className="mb-3">
-                <label className="form-label">Apellido</label>
+                <label className="form-label">Apellidos</label>
                 <input
                   type="text"
                   className="form-control"
-                  name="apellido"
+                  name="apellidos"
                   required
                   onChange={(e) => handleChange(e)}
-                  value={dataEmployee.apellido}
+                  value={dataEmployee.apellidos}
                 />
               </div>
               <div className="mb-3">
